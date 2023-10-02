@@ -1,0 +1,5 @@
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Senden</button> <span><a href = "/sign_up">Sign up?</a></span>
+</form>

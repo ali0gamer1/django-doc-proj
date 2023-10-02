@@ -1,0 +1,15 @@
+<p>
+    <label for="poll">{{poll.question_text}}
+        <br>
+        <p>
+            {{poll.pub_date}}
+        </p>
+    </label>
+    <div id="poll">
+        {% for choice in poll.choice.all %}
+        <p>
+            <a href = '{{choice.id}}/'>{{choice.choice_text}}:&nbsp;{{choice.votes}}</a>{% if not forloop.last %},&nbsp;{% endif %}
+        </p>
+        {% endfor %}
+    </div>
+</p>

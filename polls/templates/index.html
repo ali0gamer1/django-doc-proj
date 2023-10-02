@@ -1,0 +1,18 @@
+
+
+{% for poll in polls %}
+
+    <p>
+        <label for="poll">{{poll.question_text}}
+            <br>
+            <p>
+                {{poll.pub_date}}
+            </p>
+        </label>
+        <a id="poll" href="/vote/{{poll.id}}">
+           Vote
+        </a>
+        
+    </p>
+    <br>
+{% endfor %}
